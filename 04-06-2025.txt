@@ -1,0 +1,38 @@
+04/06/2025
+
+#java string
+comparision method:
+1. equals()
+2. equalsIgnoreCase()
+3. compareTo()
+4. compareToIgnoreCase()
+5. startswith(prefix,fromIndex)
+6. endsWith()
+7. contentEquals(charSeq)
+8. contents()
+
+searching methods:
+1. indexOf("ASCII/character seq")
+2. indexOf("ASCII/character seq", from index)
+3. lastIndexOf("ASCII/character seq" and from index)
+4. substring(BeginIndex,EndIndex)
+5. charAt(index)
+6. subSequence(BeginIndex,EndIndex)
+
+1. toLowerCase()
+2. toUpperCase()
+3. length()
+4. trim()
+5. stripLeading()
+6. stripTrailing()
+7. repeat(count)
+8. indent(int)
+9. toCharArray()
+
+1. matches()
+2. replace()
+3. replaceFirst()
+4. replaceAll()
+5. split()
+6. join()
+

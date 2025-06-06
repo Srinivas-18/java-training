@@ -1,0 +1,37 @@
+05/06/2025
+session 1
+
+# Topic:
+1. String and String Methods
+2. String Buffer and String Builder
+
+# Problems
+1. Write a program to check the given string is palindrome or not?
+2. Write a program to Remove outmost Paranthesis?
+3. Write a program to convert String to number?
+4. Write a program to find the largest Odd number in a string?
+
+# String -Immutable, StringBuffer, StringBuilder
+when String object needs to be modified very often we should not use string object.
+
+## StringBuffer -java.lang Mutable class -synchronized class
+we cannot make the string literal as mutable by using the StringBuffer.
+
+StringBuffer sb="abc;"
+
+# Synchronized
+A thread-safe, mutable sequence of characters.
+
+#StringBuilder- non synchronized class -java. lang -Mutable class -JDK 1.5 ->
+A mutable sequence of characters. This class provides an API compatible with StringBuffer, but with no guarantee of synchronization
+
+#Not synchronized
+laptop-two browser -chrome -firefox- all play simultaniously
+
+#Method(String Builder)
+1. append()
+2. insert(offset,"char seq")
+3. reverse()
+4. deleteCharAt(index)
+5. replace(start,end,"char seq")
+6. hashCode()

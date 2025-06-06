@@ -1,0 +1,117 @@
+03/06/2025
+Session-1
+
+Rotating an array:
+ when k=1;
+
+import java.util.Arrays;
+
+public class ArrayDemo2 {
+    public static void main(String[] args) {
+        int[]a={1,2,3,4,5};
+        a[0]=a[1];
+        a[1]=a[2];
+        a[2]=a[3];
+        a[3]=a[4];
+        a[4]=1;
+
+            System.out.println(Arrays.toString(a));
+        }
+        
+    }
+// output: [2, 3, 4, 5, 1]
+
+when k=2
+
+import java.util.Arrays;
+
+public class ArrayDemo2 {
+    public static void main(String[] args) {
+        int[]a={1,2,3,4,5};
+        int k=2;
+        // bruteforce approach
+        for(int j=0;j<k;j++){
+            int first=a[0];
+            int n=a.length;
+            for(int i=0;i<n-1;i++){
+                a[i]=a[i+1];
+            }
+            a[a.length-1]=first;
+        }
+        // time complexity is: O(n^k)
+        System.out.println(Arrays.toString(a));
+        }
+        
+    }
+// output: [3, 4, 5, 1, 2]
+
+write a program that the given array is sorted or not
+
+import java.util.Arrays;
+
+public class ArrayDemo2 {
+    public static void main(String[] args) {
+        int[]a={5,2,3,4,1};
+        if(issorted(a)){
+            System.out.println("yes");
+        }else{
+            System.out.println("no");
+        }
+        }
+        public static boolean issorted(int a[]) {
+            int n=a.length;
+            for(int i=0;i<n-1;i++){
+                if(a[i]>a[i+1]){
+                    return false;
+                }
+            }
+            return true;
+            
+        }
+        
+    }
+
+
+1752. Check if Array Is Sorted and Rotated
+
+import java.util.Arrays;
+
+public class ArrayDemo2 {
+    public static void main(String[] args) {
+        int[]a={3,5,4,1,2};
+        System.out.println(check(a));
+        }
+    public static boolean check(int[] a) {
+        int n=a.length;
+        int cnt=0;
+        for(int i=0;i<n-1;i++) {
+            if(a[i]>a[i+1]) {
+                cnt++;
+            }
+        }
+        return (cnt<=1)?true : false;
+    }
+}
+
+
+how to declare, initialize, and print a 2D array (also known as a matrix or table).
+
+import java.util.Arrays;
+
+public class ArrayDemo2 {
+    public static void main(String[] args) {
+        int[][]a={{1,2,3},
+                {4,5,6},
+                {7,8,9}};
+            for(int i = 0; i < a.length; i++) {
+                for (int j = 0; j < a[i].length; j++) {
+                    System.out.print(a[i][j] + " ");
+                }
+                System.out.println();
+            }
+        
+    }
+}
+
+
+

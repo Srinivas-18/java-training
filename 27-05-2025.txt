@@ -1,0 +1,113 @@
+                    		*Java Programming*
+27/05/25
+session-1
+
+in 1987- c programming By Dennis Ritchie
+which follows procedural language
+
+Drawbacks:
+1. not good handling memory
+2. no exception handling
+3. it does not follows OOPS paradigm
+
+in 1979 - c++ by Bjarne stroustrip
+
+Drawbacks:
+1. pointers
+2. operator overloading using virtual function
+3. no platform independent
+
+in 1991 - python programming
+
+in 1995 - Java Programming by james gosling
+
+feature:
+1. simple if you already know c and c++ because most of the java syntax was from C and C++ only
+2. robust- Error prone code
+
+JDK -> JVM -> JRE -> *Byte code verifier* , *Library Files* , *JIT* 
+
+3. it is platform independent 
+   jdk is platform independent
+   jvm is platform dependent
+4. it follows OOPS paradigm
+
+$$ -it has 4 pillers
+1. Encapsulation
+2. Polymorphism
+3. inheritance
+4. Abstraction $$
+
+	100% OOPS is java??
+		-no
+5. good in memory management
+	- garbage collector
+6. it is multi threaded language
+7. it handles exception handling
+8. distributed language
+	-for web applications
+	-for embedded system
+	-for TCP/IP protocols
+9. it is portable 
+
+session-2
+installation and set of jdk and git 
+
+session-3
+-when even you see a uppercase in the code that means it is a class or an interface
+-class name and file name should be same 
+- // (single line command)
+- use ctrl + / (to command the lines in the code)
+-use format document option(shift+alt+f) to keep the code in correct alignment
+- difference btw println and print
+- why do we need data types?? and what is the use of it?
+  we need to use the computer memory wisely so, to achieve that we use this data types!!
+
+there are two types:
+1. primitive data type (size)
+  	short(2bit) range = -32768 to 32767
+	long(8bits)
+	byte (2^8 = 256/2 => -128 to +128)(1bit)
+	int (4bit)
+	float (4bit)
+	double (8bit)
+	char (2bit) default: 0x0000
+	Boolean (1bit) default: false
+2. Non-primitive data type
+	Array
+	string, etc,.
+
+Type casting:
+		1. narrow and 2. widening type casting
+
+1. Narrowing Type Casting
+Converting a larger data type to a smaller one.
+Done manually, may lose data.
+Example: int → byte, double → float
+
+sample code:
+int a = 129;
+byte b = (byte) a;         
+//output: -127
+
+Note: java follows Unicode so,
+ranges: in int to char converstion
+=>  a = 97 & z = 122
+=>  A = 65 & Z = 90
+
+int a = "65"
+char c = (char) a;
+//output: A
+
+2. widening type casting:
+Converting a smaller data type to a larger one.
+Done automatically.
+Example: int → long, float → double
+
+sample code: 
+float f = 3.14f;
+double d = f;
+//output: 3.14
+
+
+=> Operators

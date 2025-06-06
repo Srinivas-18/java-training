@@ -1,0 +1,361 @@
+29/05/2025
+session1
+
+Jump statement: break and continue
+Star based patterns:
+
+1. square
+
+import java.util.Scanner;
+public class Demo5{
+    public static void main(String[]args){
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int n=sc.nextInt();
+        for(int row=1;row<=n;row++){
+            for(int col=1;col<=n;col++){
+                System.out.print("*");
+           
+
+        }System.out.println();
+    } 
+ }
+}
+
+2. right angle triangle
+
+	*
+	**
+	***
+	****
+	*****
+
+import java.util.Scanner;
+public class Demo5{
+    public static void main(String[]args){
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int n=sc.nextInt();
+        for(int row=0;row<n;row++){
+            for(int col=0;col<row;col++){
+                System.out.print("*");
+           
+
+        }System.out.println();
+    } 
+ }
+}
+
+3. reverse right angle triangle
+
+	*****
+	****
+	***	
+	**
+	*
+
+
+import java.util.Scanner;
+public class Demo5{
+    public static void main(String[]args){
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int n=sc.nextInt();
+        for(int row=0;row<n;row++){
+            for(int col=0;col<n-row;col++){
+                System.out.print("*");
+           
+
+        }System.out.println();
+    } 
+ }
+}
+
+4.
+	*
+	**
+	***
+	****
+	*****
+	****
+	***
+	**
+	*
+
+
+import java.util.Scanner;
+public class Demo5{
+    public static void main(String[]args){
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int n=sc.nextInt();
+        for(int row=0;row<n;row++){
+            for(int col=0;col<row && col<n-row;col++){
+                System.out.print("*");
+           
+
+        }System.out.println();
+    } 
+ }
+}
+
+Original answer:-
+
+import java.util.Scanner;
+public class Demo5{
+    public static void main(String[]args){
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int n=sc.nextInt();
+        for(int row=0;row<n*2;row++){
+            int totalCol=(row>n)?n*2-row:row; 
+            for(int col=0;col<totalCol;col++){
+                System.out.print("*");
+           
+
+        }System.out.println();
+    } 
+ }
+}
+
+5.
+     *
+    **
+   ***
+  ****
+ *****
+
+import java.util.Scanner;
+public class Demo5{
+    public static void main(String[]args){
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int n=sc.nextInt();
+        for(int row=0;row<n;row++){
+            // for printing space 
+            for(int spaces=0;spaces<n-row;spaces++){
+                System.out.print(" ");
+
+            }
+            for(int col=0;col<row;col++){
+                    System.out.print("*");
+        }System.out.println();
+    } 
+ }
+}
+
+6.
+	*****
+ 	 ****
+  	  ***
+   	   **
+  	    *
+
+import java.util.Scanner;
+public class Demo5{
+    public static void main(String[]args){
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int n=sc.nextInt();
+        for(int row=0;row<n;row++){
+            // for printing space 
+            for(int spaces=0;spaces<row;spaces++){
+                System.out.print(" ");
+
+            }
+            for(int col=0;col<n-row;col++){
+                    System.out.print("*");
+        }System.out.println();
+    } 
+ }
+}
+
+7. 
+    *
+   ***
+  *****
+ *******
+*********
+
+import java.util.Scanner;
+public class Demo5{
+    public static void main(String[]args){
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int n=sc.nextInt();
+        for(int row=1;row<=n;row++){
+            //for printing space 
+            for(int spaces=1;spaces<=n-row;spaces++){
+                System.out.print(" ");
+
+            }
+            for(int col=1;col<=2*row-1;col++){
+                    System.out.print("*");
+        }System.out.println();
+    } 
+ }
+}
+
+8. 
+
+ *********
+  *******
+   *****
+    ***
+     *
+
+import java.util.Scanner;
+public class Demo5{
+    public static void main(String[]args){
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int n=sc.nextInt();
+        for(int row=1;row<=n;row++){
+            //for printing space 
+            for(int spaces=1;spaces<=row;spaces++){
+                System.out.print(" ");
+
+            }
+            for(int col=1;col<=11-2*row;col++){
+                    System.out.print("*");
+        }System.out.println();
+    } 
+ }
+}
+
+original answer:
+
+import java.util.Scanner;
+public class Demo5{
+    public static void main(String[]args){
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int n=sc.nextInt();
+        for(int row=n;row>=1;row--){
+            //for printing space 
+            for(int spaces=1;spaces<=n-row;spaces++){
+                System.out.print(" ");
+
+            }
+            for(int col=1;col<=2*row-1;col++){
+                    System.out.print("*");
+        }System.out.println();
+    } 
+ }
+}
+
+9.
+
+* * * * * 
+ * * * * 
+  * * * 
+   * * 
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * * 
+
+import java.util.Scanner;
+public class Demo5{
+    public static void main(String[]args){
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int n=sc.nextInt();
+        for(int row=0;row<n;row++){
+            //for printing space 
+            for(int spaces=0;spaces<row;spaces++){
+                System.out.print(" ");
+            }
+            for(int col=0;col<n-row;col++){
+                    System.out.print("* ");
+        }
+        System.out.println();
+    } 
+    for(int row=2;row<=n;row++){
+            //for printing space 
+            for(int spaces=1;spaces<=n-row;spaces++){
+                System.out.print(" ");
+            }
+            for(int col=1;col<=row;col++){
+                    System.out.print("* ");
+        }
+        System.out.println();
+    }  
+  }
+}
+
+10.  
+
+    * 
+   * * 
+  *   * 
+ *     * 
+**********
+
+import java.util.Scanner;
+public class Demo5{
+    public static void main(String[]args){
+        // Scanner sc= new Scanner(System.in);
+        // System.out.println("Enter a number: ");
+        // int n=sc.nextInt();
+        int n=5;
+        for(int row=1;row<=n;row++){
+            for(int spaces=1;spaces<=n-row;spaces++){
+                System.out.print(" ");
+            }
+            for(int col=1;col<=2*row;col++){
+                if(col==1|| col==2*row-1 || row==5){
+                    System.out.print("*");
+                }else{
+                    System.out.print(" ");
+                }
+                    
+        }
+        System.out.println();
+    }
+}
+}
+
+
+11. 
+
+*        *
+**      **
+***    ***
+****  ****
+**********
+****  ****
+***    ***
+**      **
+*        *
+
+public class Demo5 {
+    public static void main(String[] args) {
+        int n = 5;
+        // ! left part
+        for (int row = 1; row <n*2 ; row++) {
+            int totalcol = (row > n) ? 2 * n - row : row;
+            for (int col = 1; col <= totalcol; col++) {
+                System.out.print("*");
+            }
+            int spaceCol=(row<n)?n-row:n-totalcol;
+            for(int space=1;space<=spaceCol;space++)
+            {
+                System.out.print(" ");
+            }
+            for(int space=1;space<=spaceCol;space++)
+            {
+                System.out.print(" ");
+            }
+             for (int col = 1; col <= totalcol; col++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+12. diamond (task)
+
+13. 
