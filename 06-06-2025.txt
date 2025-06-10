@@ -4,4 +4,187 @@ session 1
 OOPS CONCEPT
 
 OBJECTS: IT IS A COMBINATION OF STATE AND BEHAVIOUR(usage)
+class: class is a template or a blueprint, they referring class as a logical entity.
+class is a container, it is a collection of objects
+class defines the variables and methods are common to all objects of a certain
 
+
+		class declaration:
+
+class myClass{
+// field,constructor, and
+// method declarations
+	}
+
+what is objects??
+1. object is a real time entity
+2. object is combination of states and behaviours
+3. object occupy space
+
+
+public=access specifer  int=return type   sum=method name   (int a, int b)=parameter list  --> method headers
+
+modifier	class   package	    subclass	 world
+public 		  Y	   Y		Y	    Y
+protected	  Y	   Y		Y	    N
+no modifier	  Y	   Y		N	    N
+private		  Y	   N		N	    N
+
+Access Modifier:
+in java, access specifiers are the keywords which are  used to define the access method,class or a variable
+
+***
+in java there are 4 access specifiers:
+1. public 
+2. private
+3. protected
+4. no modifier
+
+tocompile->
+javac -d . Filename.java
+
+to run->
+java packagename.classname
+
+
+
+package hostel.booking;
+
+public class Demo5{
+    public static void main(String[] args) {
+        Demo5 Student=new Demo5();
+        Student.Login();
+        Student.paymentGatway();
+    }
+    public void Login(){
+        System.out.println("Enter your details");
+    }
+    void selectRoomtype(){
+        System.out.println("Select your room type");
+    }
+    protected void paymentGatway(){
+        System.out.println("Payment gateway is open");
+    }
+    private void genereateHostelForm(){
+        System.out.println("Click on generate bill");
+    }
+    void logout(){
+        System.out.println("Log out successfully");
+    }
+
+}
+
+
+task:
+write a program to print a given string from any where
+ 
+public class Hostel {
+    public static void main(String[] args) {
+        // write a program to print a given string from any where
+        String s="PROGRAM";
+            int mid= s.length() /2;
+            StringBuilder Sb = new StringBuilder();
+            for(int i=mid;i<s.length();i++){
+                Sb.append(s.charAt(i));
+                System.out.println(Sb);
+            }
+            for(int i=0; i<mid;i++){
+                Sb.append(s.charAt(i));
+                System.out.println(Sb);
+            }
+    }
+}
+ 
+
+write a program to find the no of comma present?
+input: 1010
+output: 11
+
+logic: from 1,000 the commas start so we need to count from 1000 so, when input is 1010 
+i.e, 
+
+1,000
+1,001
+1,002
+1,003
+1,004
+1,005         // so, the total was 11 and the output should be also 11
+1,006
+1,007
+1,008
+1,009
+1,010
+
+code:
+
+import java.util.Scanner;
+public class Hostel {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        long n=sc.nextLong();
+        long count = 0;
+        for (long i = 999; i <= n; i++) {
+            String s = String.valueOf(i);
+            count=count+(s.length()-1)/3;
+        }
+        System.out.println(count);
+    }
+}
+
+
+roman number to integer:
+
+public class Practice3 {
+    public static void main(String[] args) {
+        String s="IV";
+        System.out.println(romanToInt(s));
+    }
+    public static  int romanToInt(String s) {
+        int ans=0;
+        for(int i=0;i<s.length();i++)
+        {
+            int s1=value(s.charAt(i));
+            if(i+1<s.length())
+            {
+                 int s2=value(s.charAt(i+1));
+                 if(s1>=s2)
+                 {
+                    ans+=s1;
+                 }
+                 else{
+                    ans-=s1;
+                 }
+            }else{
+                ans=ans+s1;
+            }
+        }
+        return ans;
+
+    }
+    public static int value(char c)
+    {
+        switch(c)
+        {
+            case 'I':return 1;
+            case 'V':return 5;
+            case 'X':return 10;
+            case 'L':return 50;
+            case 'C':return 100;
+            case 'D':return 500;
+            case 'M':return 1000;
+        }
+        return -1;
+    }
+}
+
+
+constructor
+what is constructor?
+
+1. constructor is useful for initializing object specific values
+2. it is created using the same number of our class name
+3. constructor area is getting called automatically when object/instance is created[object-instance][class is instantiated]
+
+fields will be assigned with default values.
+byte, short, int, long:0
+float, double,
