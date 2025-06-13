@@ -1,0 +1,48 @@
+12/06/2025
+
+Hashing:
+1. it is an efficient method to store and retrieve elements.  O(1)
+
+2. it's is exactly same as index page in a book. In index page, every topic is associated with a page number. If we want to look some topic, we can directly get the page number from the index.
+
+3. Likewise, in hashing every value will be associated with a key. Using this key, we can point out the element directly.
+
+Quadratic probing 
+
+h(k)=kmod 10
+h(k,j)=(h(k)+i*2) mod 10
+keys: 42, 16, 91, 33,18, 27, 36, 62
+
+h(36)+1*2 mod 10
+
+Advantage: No extra space primary clustering solved
+Disadvantage: Search time O(n), There is no guarantee of finding slot. secondary clustering
+
+36 mod 10
+collision occur
+h(36)+i*2 mod 10
+6+1*2 mod 10
+7 mod 10
+collision occur
+6+2*2 mod 10
+10 mod 10
+
+Map(i)--> Entry(i)(SubInterface)--> 1. HashMap(C),, 2.LinkedHashmap(C),, 3.HashTable(C),, 4.TreeMap(C),, 5.Properties(C)
+
+#Methods in Map
+Object put(object Key, Object value)
+voidputAll(Map M)
+Object get(Object key)
+Object getAll(Object key)
+boolean containsKey(Object key)
+boolean containsValue(Object value)
+int size()
+boolean isEmpty()
+vold clear()
+
+# Collection views of Mapi
+Set keySet()
+Collection values
+Set entrySet()
+Entry: (1)
+Each key-value pair is known as Entry
